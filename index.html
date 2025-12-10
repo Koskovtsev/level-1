@@ -5,109 +5,98 @@
     <meta charset="UTF-8">
     <title>CV of Koskovtsev Anton</title>
     <style>
-        th {
-            border-style: none;
-            padding-left: 10px;
-            text-align: left;
-            vertical-align: bottom;
-            font-size: 24px;
+        .head {
+            display: flex;
+            justify-content: space-between;
         }
 
-        td {
-            padding-left: 10px;
-            font-size: large;
-            vertical-align: top;
-        }
-
-        #rowSpace {
-            height: 550px;
+        .general {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
         }
 
         h1,
         h2,
         h3 {
             padding-left: 10px;
-            margin: 20px;
         }
     </style>
 </head>
 
 <body>
-    <table style="width: 100%; border-collapse: collapse;">
-        <tr>
-            <th>
-                <h1 style="text-align:center; font-size:250%;">Anton Koskovtsev</h1>
-            </th>
-            <th rowspan="10"><img src="photo.jpg" alt="Koskovtsev Anton" style="float:right;width:300px;height:450px;">
-            </th>
-        </tr>
-        <tr>
-            <th>Kremenchug</th>
-        </tr>
-        <tr>
-            <th>akoskovtsev@gmail.com</th>
-        </tr>
-        <tr>
-            <th>+380978244409</th>
-        </tr>
-        <tr>
-            <th style="padding-top: 25px;">Objective</th>
-        </tr>
-        <tr>
-            <td>Motivated and disciplined specialist successfully transitioning into software development. I have a
-                strong background in B2B sales, logistics, and technical product promotion, providing a unique
-                perspective on business needs and product strategy. Currently focusing on frontend development (HTML,
-                CSS, JavaScript/React). Known for self-motivation, independence, and strong analytical thinking.</td>
-        </tr>
-        <tr>
-            <th>Education</th>
-        </tr>
-        <tr>
-            <td>Poltava Polytechnic College Associate Degree in Computer Programming & Automated Systems 2004-2007</td>
-        </tr>
-    </table>
-    <h2>Java Development Training</h2>
-    <ul>
-        <li>JavaRush.com Online Course. Completed 20+ levels in core Java</li> <!-- лінк добавить-->
-        <li>programming.org.ua Ш++ Computer Science Basics Alumnus. Complited Stanford CSA106 + CSB106</li>
-        <!-- лінк добавить-->
-    </ul>
-    <h2>
-        Professional Experience
-    </h2>
-    <div>
-        <h3>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025</h3>
-        <ul>
-            <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
-            <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics, merchandising,
-                and POS equipment setup</li>
-            <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
-            <li>Organized and conducted client & consumer promotions</li>
-            <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
-            <li>Experience with paperwork, CRM tools, and remote team reporting</li>
-        </ul>
-        <h3>Sales Representative | Various Companies 2008 - 2014</h3>
-        <ul>
-            <li>Represented national brands including Contex, Durex, Beeline, Vodafone</li>
-            <li>Managed key client portfolios, ensured brand visibility, and executed promotional campaigns</li>
-            <li>Worked across telecommunications, medical products</li>
-            <li>Supervised merchandising and controlled debt and stock rotation</li>
-            <li>Maintained detailed reports and documentation</li>
-        </ul>
+    <h1 style="padding-left: 140px;">Anton Koskovtsev</h1>
+    <div class="head">
+        <div class="general">
+            <h3>Kremenchug</h3>
+            <h3>+380978244409</h3>
+            <h3>akoskovtsev@gmail.com</h3>
+            <div>
+                <h2>Objective</h2>
+                <p>Motivated and disciplined specialist successfully transitioning into software development. I have a
+                    strong background in B2B sales, logistics, and technical product promotion, providing a unique
+                    perspective on business needs and product strategy. Currently focusing on frontend development
+                    (HTML,CSS, JavaScript/React). Known for self-motivation, independence, and strong analytical
+                    thinking.
+                </p>
+            </div>
+        </div>
+        <div class="img"><img src="photo.jpg" alt="Koskovtsev Anton" style="width: 200px; height: 300px;"></div>
     </div>
-    <h2>Skills</h2>
-    <ul>
-        <li>Languages & Tools: Java (Core), CS, OOP</li>
-        <li>General Tech Skills: MS Office, 1C, Windows</li>
-        <li>Soft Skills: Self-discipline, client-oriented, fast learner, problem solver</li>
-        <li>Languages: Ukrainian - native, Russian - fluent, English A2-B1</li>
-    </ul>
-    <h2>Additional Info</h2>
-    <ul>
-        <li>Valid Driver's License (Category B)</li>
-        <li>Experienced in fully autonomous regional fieldwork</li>
-        <li>Open to remote work</li>
-    </ul>
+    <main class="aboutMe">
+        <div>
+            <h3>Education</h3>
+            <p>Poltava Polytechnic College Associate Degree in Computer Programming & Automated Systems 2004-2007</p>
+        
+        <h2>Java Development Training</h2>
+        <ul>
+            <li><a href="https://javarush.com/">JavaRush</a> Online Course. Completed 20+ levels in core Java</li>
+            <!-- лінк добавить-->
+            <li><a href="https://programming.org.ua/">Ш++</a> Computer Science Basics Alumnus. Complited Stanford CSA106
+                +
+                CSB106</li>
+        </ul>
+        </div>
+        <div>
+        <h2>
+            Professional Experience
+        </h2>
+        <div>
+            <h3>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025</h3>
+            <ul>
+                <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
+                <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
+                    merchandising,
+                    and POS equipment setup</li>
+                <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
+                <li>Organized and conducted client & consumer promotions</li>
+                <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
+                <li>Experience with paperwork, CRM tools, and remote team reporting</li>
+            </ul>
+            <h3>Sales Representative | Various Companies 2008 - 2014</h3>
+            <ul>
+                <li>Represented national brands including Contex, Durex, Beeline, Vodafone</li>
+                <li>Managed key client portfolios, ensured brand visibility, and executed promotional campaigns</li>
+                <li>Worked across telecommunications, medical products</li>
+                <li>Supervised merchandising and controlled debt and stock rotation</li>
+                <li>Maintained detailed reports and documentation</li>
+            </ul>
+        </div>
+        </div>
+        <h2>Skills</h2>
+        <ul>
+            <li>Languages & Tools: Java (Core), CS, OOP</li>
+            <li>General Tech Skills: MS Office, 1C, Windows</li>
+            <li>Soft Skills: Self-discipline, client-oriented, fast learner, problem solver</li>
+            <li>Languages: Ukrainian - native, Russian - fluent, English A2-B1</li>
+        </ul>
+        <h2>Additional Info</h2>
+        <ul>
+            <li>Valid Driver's License (Category B)</li>
+            <li>Experienced in fully autonomous regional fieldwork</li>
+            <li>Open to remote work</li>
+        </ul>
+    </main>
 </body>
 
 </html>
