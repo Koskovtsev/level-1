@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>CV of Koskovtsev Anton</title>
     <style>
+        body {
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+
+        .cv_name h1{
+            text-align: center;
+        }
         .head {
             display: flex;
             justify-content: space-between;
@@ -13,7 +21,19 @@
         .general {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: space-around;
+        }
+
+        .contacts p {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cv_foto {
+            width: 200px;
+            height: 300px;
         }
 
         h1,
@@ -25,63 +45,66 @@
 </head>
 
 <body>
-    <h1 style="padding-left: 140px;">Anton Koskovtsev</h1>
-    <div class="head">
-        <div class="general">
-            <h3>Kremenchug</h3>
-            <h3>+380978244409</h3>
-            <h3>akoskovtsev@gmail.com</h3>
-            <div>
-                <h2>Objective</h2>
-                <p>Motivated and disciplined specialist successfully transitioning into software development. I have a
-                    strong background in B2B sales, logistics, and technical product promotion, providing a unique
-                    perspective on business needs and product strategy. Currently focusing on frontend development
-                    (HTML,CSS, JavaScript/React). Known for self-motivation, independence, and strong analytical
-                    thinking.
-                </p>
+    <header class="cv_name">
+        <h1 class="name">Anton Koskovtsev</h1>
+        <div class="head">
+            <div class="general">
+                <div class="contacts">
+                    <p>Kremenchug</p>
+                    <p>+380978244409</p>
+                    <p>akoskovtsev@gmail.com</p>
+                </div>
+                <div>
+                    <h2>Objective</h2>
+                    <p>Motivated and disciplined specialist successfully transitioning into software development. I have
+                        a
+                        strong background in B2B sales, logistics, and technical product promotion, providing a unique
+                        perspective on business needs and product strategy. Currently focusing on frontend development
+                        (HTML,CSS, JavaScript/React). Known for self-motivation, independence, and strong analytical
+                        thinking.
+                    </p>
+                </div>
             </div>
+            <img class="cv_foto" src="photo.jpg" alt="Koskovtsev Anton">
         </div>
-        <div class="img"><img src="photo.jpg" alt="Koskovtsev Anton" style="width: 200px; height: 300px;"></div>
-    </div>
+    </header>
     <main class="aboutMe">
         <div>
-            <h3>Education</h3>
+            <h2>Education</h2>
             <p>Poltava Polytechnic College Associate Degree in Computer Programming & Automated Systems 2004-2007</p>
-        
-        <h2>Java Development Training</h2>
-        <ul>
-            <li><a href="https://javarush.com/">JavaRush</a> Online Course. Completed 20+ levels in core Java</li>
-            <!-- лінк добавить-->
-            <li><a href="https://programming.org.ua/">Ш++</a> Computer Science Basics Alumnus. Complited Stanford CSA106
-                +
-                CSB106</li>
-        </ul>
-        </div>
-        <div>
-        <h2>
-            Professional Experience
-        </h2>
-        <div>
-            <h3>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025</h3>
+            <h2>Java Development Training</h2>
             <ul>
-                <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
-                <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
-                    merchandising,
-                    and POS equipment setup</li>
-                <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
-                <li>Organized and conducted client & consumer promotions</li>
-                <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
-                <li>Experience with paperwork, CRM tools, and remote team reporting</li>
-            </ul>
-            <h3>Sales Representative | Various Companies 2008 - 2014</h3>
-            <ul>
-                <li>Represented national brands including Contex, Durex, Beeline, Vodafone</li>
-                <li>Managed key client portfolios, ensured brand visibility, and executed promotional campaigns</li>
-                <li>Worked across telecommunications, medical products</li>
-                <li>Supervised merchandising and controlled debt and stock rotation</li>
-                <li>Maintained detailed reports and documentation</li>
+                <li><a href="https://javarush.com/">JavaRush</a> Online Course. Completed 20+ levels in core Java</li>
+                <li><a href="https://programming.org.ua/">Ш++</a> Computer Science Basics Alumnus. Complited Stanford
+                    CSA106+CSB106</li>
             </ul>
         </div>
+        <div>
+            <h2>
+                Professional Experience
+            </h2>
+            <div>
+                <h3>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025
+                </h3>
+                <ul>
+                    <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
+                    <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
+                        merchandising,
+                        and POS equipment setup</li>
+                    <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
+                    <li>Organized and conducted client & consumer promotions</li>
+                    <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
+                    <li>Experience with paperwork, CRM tools, and remote team reporting</li>
+                </ul>
+                <h3>Sales Representative | Various Companies 2008 - 2014</h3>
+                <ul>
+                    <li>Represented national brands including Contex, Durex, Beeline, Vodafone</li>
+                    <li>Managed key client portfolios, ensured brand visibility, and executed promotional campaigns</li>
+                    <li>Worked across telecommunications, medical products</li>
+                    <li>Supervised merchandising and controlled debt and stock rotation</li>
+                    <li>Maintained detailed reports and documentation</li>
+                </ul>
+            </div>
         </div>
         <h2>Skills</h2>
         <ul>
