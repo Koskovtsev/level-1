@@ -41,12 +41,62 @@
         .cv_photo {
             width: 200px;
             height: 300px;
+            padding: 10px;
+        }
+
+        .digi p {
+            padding-left: 20px;
         }
 
         h1,
         h2,
         h3 {
             padding-left: 10px;
+        }
+
+        @media print {
+            body {
+                /* margin: 10px; */
+                font-size: 11pt;
+                line-height: 1.2;
+            }
+
+            h1 {
+                font-size: 20pt;
+                margin-bottom: 5px;
+            }
+
+            h2 {
+                font-size: 16pt;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            h3,
+            h4 {
+                font-size: 12pt;
+                margin-top: 5px;
+                margin-bottom: 2px;
+            }
+
+            ul {
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+
+            li {
+                margin-bottom: 2px;
+            }
+
+            .cv_photo {
+                width: 120px;
+                height: 180px;
+            }
+
+            .cv_contacts p {
+                font-size: 16px;
+            }
+
         }
     </style>
 </head>
@@ -63,11 +113,11 @@
                 </div>
                 <div>
                     <h2>Objective</h2>
-                    <p>Motivated and disciplined specialist successfully transitioning into software development. I have
-                        a strong background in B2B sales, logistics, and technical product promotion, providing a unique
-                        perspective on business needs and product strategy. Currently focusing on frontend development
-                        (HTML,CSS, JavaScript/React). Known for self-motivation, independence, and strong analytical
-                        thinking.
+                    <p> Highly disciplined and technically-oriented specialist with a background in Computer
+                        Programming and Sales. Transitioning into QA Engineering. Possess a strong understanding of both
+                        Backend (Java Core) and Frontend (HTML/CSS, JS) technologies, which allows for deep technical
+                        analysis and effective bug reporting. Aiming to apply my analytical skills and attention to
+                        detail at G5 Games QA Internship.
                     </p>
                 </div>
             </div>
@@ -76,14 +126,60 @@
     </header>
     <main>
         <section class="portfolio">
-            <h2>Portfolio</h2>
-            <p class="digi">
-                Corporate Website for Service Company | <a href="https://koskovtsev.github.io/di-gi/"
+            <!-- <h2>Portfolio</h2> -->
+            <section class="technical-projects">
+                <h2>Technical Projects & Quality Control</h2>
+
+                <div class="project-item">
+                    <h3>Image Processing & Silhouette Recognition (Java)</h3>
+                    <ul>
+                        <li><strong>Challenge:</strong> Developed an algorithm to identify and separate overlapping
+                            silhouettes in complex images.</li>
+                        <li><strong>Testing & Calibration:</strong> Managed a test suite of 30+ edge-case images.
+                            Performed extensive parameter tuning to handle "sticky" objects and overlapping boundaries.
+                        </li>
+                        <li><strong>Analytical Approach:</strong> Evaluated algorithm accuracy across different
+                            datasets. Developed a system of fine-tuning settings to achieve 100% recognition for
+                            specific edge cases, balancing precision and recall.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Custom Data Structures & Manual Unit Testing (Java)</h3>
+                    <ul>
+                        <li><strong>Implementation:</strong> Built custom versions of <strong>ArrayList</strong> and
+                            <strong>LinkedList</strong> from scratch (Stanford CS106 curriculum).
+                        </li>
+                        <li><strong>Validation:</strong> Created a proprietary testing framework (custom test methods)
+                            to validate core logic.</li>
+                        <li><strong>Edge Case Analysis:</strong> Manually verified boundary conditions, memory links,
+                            and data integrity without using external libraries like JUnit, ensuring deep understanding
+                            of internal mechanics.</li>
+                    </ul>
+                </div>
+            </section>
+            <div class="digi">
+                <h3>Corporate Website for Service Company</h3>
+                <p>
+                    <a href="https://koskovtsev.github.io/di-gi/" class="digi__link_demo">Live Demo</a> |
+                    <a href="https://github.com/Koskovtsev/di-gi" class="digi__link_github">GitHub</a>
+                </p>
+                <ul>
+                    <li><strong>Development:</strong> Created a responsive website from Figma using pure CSS (Masonry
+                        layout, mobile navigation).</li>
+                    <li><strong>QA & Testing:</strong> Performed comprehensive cross-browser and cross-device testing
+                        (from 320px to Desktop). </li>
+                    <li><strong>Performance:</strong> Optimized asset loading and ensured 100% layout stability across
+                        all resolutions.</li>
+                </ul>
+                <!-- Corporate Website for Service Company | <a href="https://koskovtsev.github.io/di-gi/"
                     class="digi__link_demo">Live Demo</a> | <a href="https://github.com/Koskovtsev/di-gi"
                     class="digi__link_github">GitHub</a> Developed a responsive
                 website from a Figma design using pure CSS for complex elements like a Masonry layout and mobile
-                navigation(CSS). Optimized performance and ensured full compatibility across all devices down to 320px.
-            </p>
+                navigation(CSS). Developed with focus on cross-browser compatibility and responsive design, performing
+                self-testing across various screen resolutions Optimized performance and ensured full compatibility
+                across all devices down to 320px. -->
+            </div>
         </section>
         <div>
             <h2>Education</h2>
@@ -91,7 +187,8 @@
             <h2>Java Development Training</h2>
             <ul>
                 <li><a href="https://javarush.com/">JavaRush</a> Online Course. Completed 20+ levels in core Java</li>
-                <li><a href="https://diploma.programming.org.ua/d/OVN3xjyLvYbnaldVr1d6RE2q98G7W5Pk">Ш++</a> Computer Science Basics Alumnus. Complited Stanford
+                <li><a href="https://diploma.programming.org.ua/d/OVN3xjyLvYbnaldVr1d6RE2q98G7W5Pk">Ш++</a> Computer
+                    Science Basics Alumnus. Complited Stanford
                     CSA106+CSB106</li>
             </ul>
         </div>
@@ -104,9 +201,11 @@
                 </h4>
                 <ul>
                     <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
+                    <li>Developed a keen eye for detail through managing complex B2B contracts and
+                        technical product specifications, ensuring 100% accuracy in financial and operational reporting.
+                    </li>
                     <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
-                        merchandising,
-                        and POS equipment setup</li>
+                        merchandising, and POS equipment setup</li>
                     <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
                     <li>Organized and conducted client & consumer promotions</li>
                     <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
@@ -125,7 +224,9 @@
         <div>
             <h2>Skills</h2>
             <ul>
-                <li><strong>Tech Stack:</strong> HTML5, CSS3 (Flexbox, Grid), JavaScript (ES6+)</li>
+                <li><strong>QA Awareness:</strong> Bug reporting (Steps to reproduce, Expected/Actual results),
+                    Understanding of SDLC, DevTools (Elements, Console, Network), Test-cases basics.</li>
+                <li><strong>Tech Stack:</strong> JavaScript (ES6+), HTML5, CSS3 (Flexbox, Grid)</li>
                 <li><strong>Programming & CS:</strong> Java Core, OOP, Algorithms & Data Structures</li>
                 <li><strong>Design & Tools:</strong> Figma (Figma-to-Code), Git, VS Code</li>
                 <li><strong>General Skills:</strong> MS Office, 1C, Windows</li>
