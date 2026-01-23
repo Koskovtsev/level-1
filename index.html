@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@
         }
 
         body.ua [data-lang="ua"] {
-            display: inline;
+            display: revert;
         }
 
         body.ua [data-lang="en"] {
@@ -105,8 +105,8 @@
             font-weight: 700;
         }
 
-
-        li {
+        .skills li,
+        .project-item li {
             background: #f8f9fa;
             border-radius: 4px;
         }
@@ -255,11 +255,11 @@
                                 <span data-lang="ua">Аналітичний підхід:</span>
                             </strong>
                             <span data-lang="en">Evaluated algorithm accuracy across different datasets. Developed a
-                                system of fine-tuning settings to achieve 100% recognition for specific edge cases,
+                                system of fine-tuning settings to achieve stable recognition for defined edge cases,
                                 balancing precision and recall.</span>
                             <span data-lang="ua">Оцінював точність алгоритму на різних наборах даних. Розробив систему
-                                тонкого налаштування параметрів для досягнення 100% розпізнавання у специфічних складних
-                                випадках, балансуючи між точністю (precision) та повнотою (recall) виявлення.</span>
+                                тонкого налаштування параметрів для досягнення стабільного розпізнавання у визначених
+                                граничних випадках, балансуючи між точністю (precision) та повнотою (recall).</span>
                         </li>
                     </ul>
                 </div>
@@ -354,7 +354,6 @@
                 </ul>
             </div>
         </section>
-
         <section class="training">
             <h2>
                 <span data-lang="en">Java Development Training</span>
@@ -423,22 +422,6 @@
                     <span data-lang="ua">Досвід роботи з CRM-системами та віддаленою звітністю.</span>
                 </li>
             </ul>
-            <!-- <div>
-            <h4>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025
-            </h4>
-            <ul>
-                <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
-                <li>Developed a keen eye for detail through managing complex B2B contracts and
-                    technical product specifications, ensuring 100% accuracy in financial and operational reporting.
-                </li>
-                <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
-                    merchandising, and POS equipment setup</li>
-                <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
-                <li>Organized and conducted client & consumer promotions</li>
-                <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
-                <li>Experience with paperwork, CRM tools, and remote team reporting</li>
-            </ul> -->
-
             <h3>
                 <span data-lang="en">Sales Representative | Various Companies 2008 - 2014</span>
                 <span data-lang="ua">Торговий представник | Різні компанії 2008 - 2014</span>
@@ -465,7 +448,7 @@
                 </li>
                 <li>
                     <span data-lang="en">Maintained detailed reports and meticulous documentation.</span>
-                    <span data-lang="ua">Вев детальну звітність та ретельну документацію.</span>
+                    <span data-lang="ua">Вів детальну звітність та ретельну документацію.</span>
                 </li>
             </ul>
         </section>
@@ -499,8 +482,10 @@
                 </li>
                 <li class="skill-item">
                     <strong><span data-lang="en">Languages:</span><span data-lang="ua">Мови:</span></strong>
-                    <span data-lang="en">English (A2-B1), Ukrainian (Native), Russian (Fluent).</span>
-                    <span data-lang="ua">Англійська (A2-B1), Українська (Рідна), Російська (Вільна).</span>
+                    <span data-lang="en">English (Intermediate, reading technical documentation), Ukrainian (Native),
+                        Russian (Fluent).</span>
+                    <span data-lang="ua">Англійська (інтермедіат, читання технічної документації), Українська (Рідна),
+                        Російська (Вільна).</span>
                 </li>
             </ul>
         </section>
@@ -527,6 +512,7 @@
     </main>
     <script>
         function setLang(lang) {
+            document.documentElement.lang = lang;
             const body = document.body;
             const buttons = document.querySelectorAll('.lang-btn');
 
@@ -537,7 +523,6 @@
             }
 
             buttons.forEach(btn => {
-                // btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
                 const isCurrent = btn.getAttribute('data-btn-lang') === lang;
                 btn.classList.toggle('active', isCurrent);
             });
