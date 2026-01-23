@@ -10,6 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <style>
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .lang-btn {
+            padding: 8px 15px;
+            cursor: pointer;
+            border: 1px solid #333;
+            background: #fff;
+            font-family: inherit;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .lang-btn.active {
+            background: #333;
+            color: #fff;
+            cursor: default;
+        }
+
+        [data-lang="ua"] {
+            display: none;
+        }
+
+        body.ua [data-lang="ua"] {
+            display: inline;
+        }
+
+        body.ua [data-lang="en"] {
+            display: none;
+        }
+
         body {
             font-family: "Nunito", sans-serif;
             margin-left: 25px;
@@ -48,13 +83,49 @@
             padding-left: 20px;
         }
 
-        h1,
-        h2,
-        h3 {
+        h1 {
             padding-left: 10px;
         }
 
+        h2 {
+            font-size: 1.4rem;
+            color: #364c62;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: #1e2a35;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+
+        li {
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .skill-item {
+            padding: 10px;
+        }
+
+        .skill-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
         @media print {
+            .lang-switch {
+                display: none;
+            }
+
             body {
                 font-size: 11pt;
                 line-height: 1.2;
@@ -101,22 +172,42 @@
 </head>
 
 <body>
+    <div class="lang-switch">
+        <button class="lang-btn active" data-btn-lang="en" onclick="setLang('en')">ENG</button>
+        <button class="lang-btn" data-btn-lang="ua" onclick="setLang('ua')">УКР</button>
+    </div>
     <header>
-        <h1 class="cv_name">Anton Koskovtsev</h1>
+        <h1 class="cv_name">
+            <span data-lang="en">Anton Koskovtsev</span>
+            <span data-lang="ua">Антон Косковцев</span>
+        </h1>
         <div class="cv_content">
             <div class="cv_info">
                 <div class="cv_contacts">
-                    <p>Kremenchug</p>
+                    <p>
+                        <span data-lang="en">Kremenchug</span>
+                        <span data-lang="ua">Кременчук</span>
+                    </p>
                     <p>+380978244409</p>
                     <p>akoskovtsev@gmail.com</p>
                 </div>
                 <div>
-                    <h2>Objective</h2>
-                    <p> Highly disciplined and technically-oriented specialist with a background in Computer
-                        Programming and Sales. Transitioning into QA Engineering. Possess a strong understanding of both
-                        Backend (Java Core) and Frontend (HTML/CSS, JS) technologies, which allows for deep technical
-                        analysis and effective bug reporting. Aiming to apply my analytical skills and attention to
-                        detail at G5 Games QA Internship.
+                    <h2>
+                        <span data-lang="en">Objective</span>
+                        <span data-lang="ua">Мета</span>
+                    </h2>
+                    <p>
+                        <span data-lang="en">Highly disciplined and technically-oriented specialist with a background in
+                            Computer Programming and Sales. Transitioning into QA Engineering. Knowledge of Java Core
+                            and a solid understanding of Frontend fundamentals(HTML/CSS, JS) allow me to perform
+                            technical analysis and create effective bug reports. Aiming to apply my analytical skills
+                            and
+                            attention to detail at G5 Games QA Internship.</span>
+                        <span data-lang="ua">Дисциплінований спеціаліст із технічним бекграундом у програмуванні та
+                            досвідом у продажах. Переходжу в сферу QA Engineering. Володіння базою Java Core та
+                            розуміння принципів Frontend-розробки (HTML/CSS, JavaScript) дозволяють мені проводити
+                            технічний аналіз продукту та створювати детальні баг-репорти. Прагну застосувати свої
+                            аналітичні навички та увагу до деталей на стажуванні G5 Games QA Internship.</span>
                     </p>
                 </div>
             </div>
@@ -126,119 +217,332 @@
     <main>
         <section class="portfolio">
             <section class="technical-projects">
-                <h2>Technical Projects & Quality Control</h2>
+                <h2>
+                    <span data-lang="en">Technical Projects & Quality Control</span>
+                    <span data-lang="ua">Технічні проекти & Контроль якості</span>
+                </h2>
                 <div class="project-item">
-                    <h3>Image Processing & Silhouette Recognition (Java)</h3>
+                    <h3>
+                        <span data-lang="en">Image Processing & Silhouette Recognition (Java)</span>
+                        <span data-lang="ua">Обробка зображень та розпізнавання силуетів (Java)</span>
+
+                    </h3>
                     <ul>
-                        <li><strong>Challenge:</strong> Developed an algorithm to identify and separate overlapping
-                            silhouettes in complex images.</li>
-                        <li><strong>Testing & Calibration:</strong> Managed a test suite of 30+ edge-case images.
-                            Performed extensive parameter tuning to handle "sticky" objects and overlapping boundaries.
+                        <li>
+                            <strong>
+                                <span data-lang="en">Challenge:</span>
+                                <span data-lang="ua">Завдання:</span>
+                            </strong>
+                            <span data-lang="en">Developed an algorithm to identify and separate overlapping silhouettes
+                                on contrasting backgrounds.</span>
+                            <span data-lang="ua">Розробив алгоритм для ідентифікації та розділення силуетів, що
+                                накладаються один на одного, на контрастному фоні.</span>
                         </li>
-                        <li><strong>Analytical Approach:</strong> Evaluated algorithm accuracy across different
-                            datasets. Developed a system of fine-tuning settings to achieve 100% recognition for
-                            specific edge cases, balancing precision and recall.</li>
+                        <li>
+                            <strong>
+                                <span data-lang="en">Testing & Calibration:</span>
+                                <span data-lang="ua">Тестування та калібрування:</span>
+                            </strong>
+                            <span data-lang="en">Managed a test suite of 30+ edge-case images. Performed extensive
+                                parameter tuning to handle "sticky" objects and overlapping boundaries.</span>
+                            <span data-lang="ua">Керував тестовим набором із 30+ зображень з граничними випадками.
+                                Провів детальне налаштування параметрів для коректної обробки «злиплих» об'єктів та
+                                розділення спільних меж.</span>
+                        </li>
+                        <li>
+                            <strong>
+                                <span data-lang="en">Analytical Approach:</span>
+                                <span data-lang="ua">Аналітичний підхід:</span>
+                            </strong>
+                            <span data-lang="en">Evaluated algorithm accuracy across different datasets. Developed a
+                                system of fine-tuning settings to achieve 100% recognition for specific edge cases,
+                                balancing precision and recall.</span>
+                            <span data-lang="ua">Оцінював точність алгоритму на різних наборах даних. Розробив систему
+                                тонкого налаштування параметрів для досягнення 100% розпізнавання у специфічних складних
+                                випадках, балансуючи між точністю (precision) та повнотою (recall) виявлення.</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="project-item">
-                    <h3>Custom Data Structures & Manual Unit Testing (Java)</h3>
+                    <h3>
+                        <span data-lang="en">Custom Data Structures & Manual Unit Testing (Java)</span>
+                        <span data-lang="ua">Власні структури даних та ручне модульне тестування (Java)</span>
+                    </h3>
                     <ul>
-                        <li><strong>Implementation:</strong> Built custom versions of <strong>ArrayList</strong> and
-                            <strong>LinkedList</strong> from scratch (Stanford CS106 curriculum).
+                        <li>
+                            <strong><span data-lang="en">Implementation:</span><span
+                                    data-lang="ua">Реалізація:</span></strong>
+                            <span data-lang="en">Built custom versions of ArrayList and LinkedList from scratch
+                                (Java).</span>
+                            <span data-lang="ua">З нуля розробив власні версії ArrayList та LinkedList на
+                                Java.</span>
                         </li>
-                        <li><strong>Validation:</strong> Created a proprietary testing framework (custom test methods)
-                            to validate core logic.</li>
-                        <li><strong>Edge Case Analysis:</strong> Manually verified boundary conditions, memory links,
-                            and data integrity without using external libraries like JUnit, ensuring deep understanding
-                            of internal mechanics.</li>
+                        <li>
+                            <strong>
+                                <span data-lang="en">Validation:</span>
+                                <span data-lang="ua">Валідація:</span>
+                            </strong>
+                            <span data-lang="en">Created a proprietary testing framework to validate core
+                                logic.</span>
+                            <span data-lang="ua">Створив власну систему тестів для перевірки основної логіки.</span>
+                        </li>
+                        <li>
+                            <strong>
+                                <span data-lang="en">Edge Case Analysis:</span>
+                                <span data-lang="ua">Аналіз граничних випадків:</span>
+                            </strong>
+                            <span data-lang="en">Manually verified boundary conditions and data integrity without
+                                using external libraries.</span>
+                            <span data-lang="ua">Вручну перевіряв граничні умови та цілісність даних без
+                                використання сторонніх бібліотек.</span>
+                        </li>
                     </ul>
                 </div>
             </section>
             <div class="digi">
-                <h3>Corporate Website for Service Company</h3>
+                <h3>
+                    <span data-lang="en">Landing Page for Service Company</span>
+                    <span data-lang="ua">Landing сторінка для сервісної компанії</span>
+                </h3>
                 <p>
                     <a href="https://koskovtsev.github.io/di-gi/" class="digi__link_demo">Live Demo</a> |
                     <a href="https://github.com/Koskovtsev/di-gi" class="digi__link_github">GitHub</a>
                 </p>
                 <ul>
-                    <li><strong>Development:</strong> Created a responsive website from Figma using pure CSS (Masonry
-                        layout, mobile navigation).</li>
-                    <li><strong>QA & Testing:</strong> Performed comprehensive cross-browser and cross-device testing
-                        (from 320px to Desktop). </li>
-                    <li><strong>Performance:</strong> Optimized asset loading and ensured 100% layout stability across
-                        all resolutions.</li>
+                    <li>
+                        <strong>
+                            <span data-lang="en">Development:</span>
+                            <span data-lang="ua">Розробка:</span>
+                        </strong>
+                        <span data-lang="en">Developed a multi-section landing page from Figma using pure CSS
+                            (Masonry layout, anchor navigation).</span>
+                        <span data-lang="ua">Реалізував багатосекційну landing сторінку на основі макета Figma
+                            (чистий CSS, сітка Masonry, якірна навігація).</span>
+                    </li>
+                    <li>
+                        <strong>
+                            <span data-lang="en">QA & Testing:</span>
+                            <span data-lang="ua">QA та тестування:</span>
+                        </strong>
+                        <span data-lang="en">Performed comprehensive UI testing: responsiveness (320px–1920px),
+                            cross-browser compatibility, and anchor links.</span>
+                        <span data-lang="ua">Провів повне тестування інтерфейсу: адаптивність (320px–1920px),
+                            кросбраузерність та коректність якірних посилань.</span>
+                    </li>
                 </ul>
-                <!-- Corporate Website for Service Company | <a href="https://koskovtsev.github.io/di-gi/"
-                    class="digi__link_demo">Live Demo</a> | <a href="https://github.com/Koskovtsev/di-gi"
-                    class="digi__link_github">GitHub</a> Developed a responsive
-                website from a Figma design using pure CSS for complex elements like a Masonry layout and mobile
-                navigation(CSS). Developed with focus on cross-browser compatibility and responsive design, performing
-                self-testing across various screen resolutions Optimized performance and ensured full compatibility
-                across all devices down to 320px. -->
             </div>
         </section>
-        <div>
-            <h2>Education</h2>
-            <p>Poltava Polytechnic College Associate Degree in Computer Programming & Automated Systems 2004-2007</p>
-            <h2>Java Development Training</h2>
-            <ul>
-                <li><a href="https://diploma.programming.org.ua/d/OVN3xjyLvYbnaldVr1d6RE2q98G7W5Pk">Ш++</a> Computer
-                    Science Basics Alumnus. Complited Stanford
-                    CSA106+CSB106</li>
-                <li><a href="https://javarush.com/">JavaRush</a> Online Course. Completed 20+ levels in core Java</li>
-            </ul>
-        </div>
-        <div>
+        <section class="education">
             <h2>
-                Professional Experience
+                <span data-lang="en">Education</span>
+                <span data-lang="ua">Освіта</span>
             </h2>
-            <div>
-                <h4>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025
-                </h4>
+            <div class="edu-item">
+                <h3>
+                    <span data-lang="en">Poltava Polytechnic College</span>
+                    <span data-lang="ua">Полтавський політехнічний коледж</span>
+                </h3>
                 <ul>
-                    <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
-                    <li>Developed a keen eye for detail through managing complex B2B contracts and
-                        technical product specifications, ensuring 100% accuracy in financial and operational reporting.
+                    <li>
+                        <p>
+                            <span data-lang="en">Associate Degree in Computer Programming & Automated Systems |
+                                2004-2007</span>
+                            <span data-lang="ua">Молодший спеціаліст з програмування та автоматизованих систем |
+                                2004-2007</span>
+                        </p>
                     </li>
-                    <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
-                        merchandising, and POS equipment setup</li>
-                    <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
-                    <li>Organized and conducted client & consumer promotions</li>
-                    <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
-                    <li>Experience with paperwork, CRM tools, and remote team reporting</li>
-                </ul>
-                <h4>Sales Representative | Various Companies 2008 - 2014</h4>
-                <ul>
-                    <li>Represented national brands including Contex, Durex, Beeline, Vodafone</li>
-                    <li>Managed key client portfolios, ensured brand visibility, and executed promotional campaigns</li>
-                    <li>Worked across telecommunications, medical products</li>
-                    <li>Supervised merchandising and controlled debt and stock rotation</li>
-                    <li>Maintained detailed reports and documentation</li>
                 </ul>
             </div>
-        </div>
-        <div>
-            <h2>Skills</h2>
+        </section>
+
+        <section class="training">
+            <h2>
+                <span data-lang="en">Java Development Training</span>
+                <span data-lang="ua">Навчання Java-розробці</span>
+            </h2>
+            <div class="training-item">
+                <h3>
+                    <span data-lang="en">Ш++ Computer Science School</span>
+                    <span data-lang="ua">Школа програмування Ш++</span>
+                </h3>
+                <ul>
+                    <li>
+                        <p>
+                            <a href="https://diploma.programming.org.ua/d/OVN3xjyLvYbnaldVr1d6RE2q98G7W5Pk">Ш++</a>
+                            <span data-lang="en">Alumnus of Computer Science Basics. Completed curriculum based on
+                                Stanford CS106A & CS106B.</span>
+                            <span data-lang="ua">Випускник курсу «Основи Computer Science». Програма на основі Stanford
+                                CS106A та CS106B.</span>
+                        </p>
+                    </li>
+                </ul>
+                <h3>
+                    <span data-lang="en">JavaRush Online Course</span>
+                    <span data-lang="ua">Онлайн-курс JavaRush</span>
+                </h3>
+                <ul>
+                    <li>
+                        <p>
+                            <a href="https://javarush.com/">JavaRush</a>
+                            <span data-lang="en">Completed 20+ levels in Java Core (Syntax, Collections, OOP).</span>
+                            <span data-lang="ua">Пройшов 20+ рівнів Java Core (Синтаксис, Колекції, ООП).</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>
+                <span data-lang="en">Professional Experience</span>
+                <span data-lang="ua">Професійний досвід</span>
+            </h2>
+            <h3>
+                <span data-lang="en">Regional Sales Representative | Fortune Cigar House | TM Captain Black, Elf Bar
+                    2014 - 2025</span>
+                <span data-lang="ua">Регіональний торговий представник | Сигарний Дім Фортуна | TM Captain Black,
+                    Elf Bar 2014 - 2025</span>
+            </h3>
             <ul>
-                <li><strong>QA Awareness:</strong> Bug reporting (Steps to reproduce, Expected/Actual results),
-                    Understanding of SDLC, DevTools (Elements, Console, Network), Test-cases basics.</li>
-                <li><strong>Tech Stack:</strong> JavaScript (ES6+), HTML5, CSS3 (Flexbox, Grid)</li>
-                <li><strong>Programming & CS:</strong> Java Core, OOP, Algorithms & Data Structures</li>
-                <li><strong>Design & Tools:</strong> Figma (Figma-to-Code), Git, VS Code</li>
-                <li><strong>General Skills:</strong> MS Office, 1C, Windows</li>
-                <li><strong>Soft Skills:</strong> Self-discipline, Problem-solving, Client-oriented, Fast learner</li>
-                <li><strong>Languages:</strong> Ukrainian (Native), English (A2-B1), Russian (Fluent)</li>
+                <li>
+                    <span data-lang="en">Independently managed B2B sales across 3 cities and retail chains.</span>
+                    <span data-lang="ua">Самостійно керував B2B продажами у 3 містах та торговельних мережах.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Ensured 100% accuracy in financial reporting and technical
+                        specifications.</span>
+                    <span data-lang="ua">Забезпечував 100% точність у фінансовій звітності та технічних
+                        специфікаціях.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Consistently ranked in Top-3 performers out of 100+ reps.</span>
+                    <span data-lang="ua">Стабільно входив у ТОП-3 найкращих результатів серед 100+
+                        співробітників.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Experienced with CRM tools and remote team reporting.</span>
+                    <span data-lang="ua">Досвід роботи з CRM-системами та віддаленою звітністю.</span>
+                </li>
             </ul>
-        </div>
-        <div>
-            <h2>Additional Info</h2>
+            <!-- <div>
+            <h4>Business Development Representative | Fortune Cigar House | TM Captain Black, Elf Bar 2014 - 2025
+            </h4>
             <ul>
-                <li>Valid Driver's License (Category B)</li>
-                <li>Experienced in fully autonomous regional fieldwork</li>
-                <li>Open to remote work</li>
+                <li>Independently manage B2B sales and distribution across 3 cities and retail chains</li>
+                <li>Developed a keen eye for detail through managing complex B2B contracts and
+                    technical product specifications, ensuring 100% accuracy in financial and operational reporting.
+                </li>
+                <li>Handle client acquisition, product assortment negotiations, contracts, orders, logistics,
+                    merchandising, and POS equipment setup</li>
+                <li>Consistently ranked in Top-3 sales performers out of 100+ reps</li>
+                <li>Organized and conducted client & consumer promotions</li>
+                <li>Responsible for all technical, financial, and operational aspects of regional territory</li>
+                <li>Experience with paperwork, CRM tools, and remote team reporting</li>
+            </ul> -->
+
+            <h3>
+                <span data-lang="en">Sales Representative | Various Companies 2008 - 2014</span>
+                <span data-lang="ua">Торговий представник | Різні компанії 2008 - 2014</span>
+            </h3>
+            <ul>
+                <li>
+                    <span data-lang="en">Represented national brands including Contex, Durex, Beeline, Vodafone.</span>
+                    <span data-lang="ua">Представляв відомі бренди, зокрема Contex, Durex, Beeline, Vodafone.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Managed key client portfolios, ensured brand visibility, and executed
+                        promotional campaigns.</span>
+                    <span data-lang="ua">Керував портфелями ключових клієнтів, забезпечував видимість бренду та проводив
+                        рекламні кампанії.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Worked across telecommunications and medical products industries.</span>
+                    <span data-lang="ua">Працював у сферах телекомунікацій та товарів медичного призначення.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Supervised merchandising, controlled debt, and managed stock rotation.</span>
+                    <span data-lang="ua">Контролював мерчендайзинг, дебіторську заборгованість та ротацію складських
+                        залишків.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Maintained detailed reports and meticulous documentation.</span>
+                    <span data-lang="ua">Вев детальну звітність та ретельну документацію.</span>
+                </li>
             </ul>
-        </div>
+        </section>
+        <section class="skills">
+            <h2>
+                <span data-lang="en">Technical & Soft Skills</span>
+                <span data-lang="ua">Навички</span>
+            </h2>
+
+            <ul class="skills-grid">
+                <li class="skill-item">
+                    <strong><span data-lang="en">QA Awareness:</span><span data-lang="ua">Основи QA:</span></strong>
+                    <span data-lang="en">Bug reporting (Steps, Expected/Actual results), Test-cases basics, Chrome
+                        DevTools.</span>
+                    <span data-lang="ua">Баг-репортинг (кроки, очікуваний/фактичний результат), основи тест-кейсів,
+                        Chrome DevTools.</span>
+                </li>
+                <li class="skill-item">
+                    <strong>
+                        <span data-lang="en">Tech Stack:</span>
+                        <span data-lang="ua">Технології:</span>
+                    </strong>
+                    <span>Java Core, OOP, JavaScript (ES6+), HTML5, CSS3.</span>
+                </li>
+                <li class="skill-item">
+                    <strong>
+                        <span data-lang="en">Tools:</span>
+                        <span data-lang="ua">Інструменти:</span>
+                    </strong>
+                    <span>Git, Figma, VS Code, 1C, MS Office.</span>
+                </li>
+                <li class="skill-item">
+                    <strong><span data-lang="en">Languages:</span><span data-lang="ua">Мови:</span></strong>
+                    <span data-lang="en">English (A2-B1), Ukrainian (Native), Russian (Fluent).</span>
+                    <span data-lang="ua">Англійська (A2-B1), Українська (Рідна), Російська (Вільна).</span>
+                </li>
+            </ul>
+        </section>
+        <section class="additional-info">
+            <h2>
+                <span data-lang="en">Additional Info</span>
+                <span data-lang="ua">Додаткова інформація</span>
+            </h2>
+            <ul>
+                <li>
+                    <span data-lang="en">Valid Driver's License (Category B)</span>
+                    <span data-lang="ua">Водійське посвідчення (Категорія B)</span>
+                </li>
+                <li>
+                    <span data-lang="en">Experienced in fully autonomous regional fieldwork and management.</span>
+                    <span data-lang="ua">Досвід повністю автономної роботи в регіонах та операційного управління.</span>
+                </li>
+                <li>
+                    <span data-lang="en">Open to remote work.</span>
+                    <span data-lang="ua">Відкритий до віддаленої роботи.</span>
+                </li>
+            </ul>
+        </section>
     </main>
+    <script>
+        function setLang(lang) {
+            const body = document.body;
+            const buttons = document.querySelectorAll('.lang-btn');
+
+            if (lang === 'ua') {
+                body.classList.add('ua');
+            } else {
+                body.classList.remove('ua');
+            }
+
+            buttons.forEach(btn => {
+                // btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+                const isCurrent = btn.getAttribute('data-btn-lang') === lang;
+                btn.classList.toggle('active', isCurrent);
+            });
+        }
+    </script>
 </body>
 
 </html>
