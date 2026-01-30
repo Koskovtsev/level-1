@@ -100,25 +100,42 @@
         h3 {
             font-size: 1.15rem;
             color: #1e2a35;
-            margin-top: 15px;
-            margin-bottom: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
             font-weight: 700;
+        }
+
+        ul {
+            margin: 5px;
+        }
+
+        p {
+            margin: 5px;
         }
 
         .skills li,
         .project-item li {
             background: #f8f9fa;
-            border-radius: 4px;
         }
 
         .skill-item {
-            padding: 10px;
+            padding: 1px;
         }
 
         .skill-item strong {
             display: block;
             margin-bottom: 5px;
             color: #2c3e50;
+        }
+
+        .cv_contacts a {
+            color: #000000 !important;
+            text-decoration: none !important;
+        }
+
+        .cv_contacts a:hover {
+            text-decoration: underline;
+            color: #333333;
         }
 
         @media print {
@@ -167,6 +184,15 @@
                 font-size: 16px;
             }
 
+            .cv_contacts a {
+                color: #000000 !important;
+                text-decoration: none !important;
+            }
+
+            .cv_contacts a:hover {
+                text-decoration: underline;
+                color: #333333;
+            }
         }
     </style>
 </head>
@@ -190,6 +216,7 @@
                     </p>
                     <p>+380978244409</p>
                     <p>akoskovtsev@gmail.com</p>
+                    <p><a href="https://t.me/AntonK_K">t.me/AntonK_K</a></p>
                 </div>
                 <div>
                     <h2>
@@ -197,17 +224,18 @@
                         <span data-lang="ua">Мета</span>
                     </h2>
                     <p>
-                        <span data-lang="en">Highly disciplined and technically-oriented specialist with a background in
-                            Computer Programming and Sales. Transitioning into QA Engineering. Knowledge of Java Core
-                            and a solid understanding of Frontend fundamentals(HTML/CSS, JS) allow me to perform
-                            technical analysis and create effective bug reports. Aiming to apply my analytical skills
-                            and
-                            attention to detail at G5 Games QA Internship.</span>
-                        <span data-lang="ua">Дисциплінований спеціаліст із технічним бекграундом у програмуванні та
-                            досвідом у продажах. Переходжу в сферу QA Engineering. Володіння базою Java Core та
-                            розуміння принципів Frontend-розробки (HTML/CSS, JavaScript) дозволяють мені проводити
-                            технічний аналіз продукту та створювати детальні баг-репорти. Прагну застосувати свої
-                            аналітичні навички та увагу до деталей на стажуванні G5 Games QA Internship.</span>
+                        <span data-lang="en">Student at Sh++ Computer Science School with a solid foundation in
+                            Algorithms and Java Core. Currently diving deep into Frontend Development (JavaScript,
+                            React). Having completed an intensive Computer Science curriculum based on Stanford courses,
+                            I possess a strong engineering mindset and problem-solving skills. My goal is to leverage my
+                            fundamental knowledge and fast-learning abilities to build a career as a Frontend Developer
+                            and contribute to high-quality web projects</span>
+                        <span data-lang="ua">Студент школи програмування Ш++, маю міцну базу в алгоритмах та Java Core.
+                            Зараз поглиблено вивчаю Frontend-розробку (JavaScript, React). Завдяки інтенсивному курсу
+                            Computer Science (на основі програм Стенфорда), володію інженерним мисленням та навичками
+                            вирішення складних задач. Моя мета — використати фундаментальні знання та здатність швидко
+                            навчатися для розвитку в напрямку Frontend-розробки та створення якісних
+                            веб-проектів.</span>
                     </p>
                 </div>
             </div>
@@ -218,83 +246,110 @@
         <section class="portfolio">
             <section class="technical-projects">
                 <h2>
-                    <span data-lang="en">Technical Projects & Quality Control</span>
-                    <span data-lang="ua">Технічні проекти & Контроль якості</span>
+                    <span data-lang="en">Software Engineering Projects</span>
+                    <span data-lang="ua">Проекти з розробки ПЗ</span>
                 </h2>
                 <div class="project-item">
                     <h3>
-                        <span data-lang="en">Image Processing & Silhouette Recognition (Java)</span>
-                        <span data-lang="ua">Обробка зображень та розпізнавання силуетів (Java)</span>
-
+                        <span data-lang="en">Silhouette Recognition & Image Processing (Java)</span>
+                        <span data-lang="ua">Розпізнавання силуетів та обробка зображень (Java)</span>
                     </h3>
+                    <p>
+                        <a
+                            href="https://github.com/Koskovtsev/learn_projects/tree/master/shppCS-B/src/improved/src/com/shpp/p2p/cs/akoskovtsev/assignment13">GitHub</a>
+                    </p>
                     <ul>
                         <li>
-                            <strong>
-                                <span data-lang="en">Challenge:</span>
-                                <span data-lang="ua">Завдання:</span>
-                            </strong>
-                            <span data-lang="en">Developed an algorithm to identify and separate overlapping silhouettes
-                                on contrasting backgrounds.</span>
-                            <span data-lang="ua">Розробив алгоритм для ідентифікації та розділення силуетів, що
-                                накладаються один на одного, на контрастному фоні.</span>
+                            <strong><span data-lang="en">Core Algorithm:</span><span data-lang="ua">Основний
+                                    алгоритм:</span></strong>
+                            <span data-lang="en">Developed an image processing engine using Breadth-First Search (BFS)
+                                and Depth-First Search (DFS)
+                                to identify and count distinct objects (silhouettes) in a 2D pixel grid.</span>
+                            <span data-lang="ua">Розробив двигун обробки зображень на основі алгоритму пошуку в ширину
+                                (BFS) та глибину (DFS) для ідентифікації та підрахунку окремих об'єктів (силуетів) на
+                                двовимірній сітці
+                                пікселів.</span>
                         </li>
                         <li>
-                            <strong>
-                                <span data-lang="en">Testing & Calibration:</span>
-                                <span data-lang="ua">Тестування та калібрування:</span>
-                            </strong>
-                            <span data-lang="en">Managed a test suite of 30+ edge-case images. Performed extensive
-                                parameter tuning to handle "sticky" objects and overlapping boundaries.</span>
-                            <span data-lang="ua">Керував тестовим набором із 30+ зображень з граничними випадками.
-                                Провів детальне налаштування параметрів для коректної обробки «злиплих» об'єктів та
-                                розділення спільних меж.</span>
+                            <strong><span data-lang="en">Image Analysis:</span><span data-lang="ua">Аналіз
+                                    зображення:</span></strong>
+                            <span data-lang="en">Implemented background detection using color frequency mapping and
+                                custom "fuzzy logic" for pixel similarity checking.</span>
+                            <span data-lang="ua">Реалізував детекцію фону через мапу частот кольорів та власну логіку
+                                порівняння схожості пікселів (fuzzy matching).</span>
                         </li>
                         <li>
-                            <strong>
-                                <span data-lang="en">Analytical Approach:</span>
-                                <span data-lang="ua">Аналітичний підхід:</span>
-                            </strong>
-                            <span data-lang="en">Evaluated algorithm accuracy across different datasets. Developed a
-                                system of fine-tuning settings to achieve stable recognition for defined edge cases,
-                                balancing precision and recall.</span>
-                            <span data-lang="ua">Оцінював точність алгоритму на різних наборах даних. Розробив систему
-                                тонкого налаштування параметрів для досягнення стабільного розпізнавання у визначених
-                                граничних випадках, балансуючи між точністю (precision) та повнотою (recall).</span>
+                            <strong><span data-lang="en">Noise Reduction:</span><span data-lang="ua">Очищення
+                                    шуму:</span></strong>
+                            <span data-lang="en">Created an "Eraser" utility to separate touching objects and filter out
+                                visual noise, improving recognition accuracy.</span>
+                            <span data-lang="ua">Створив утиліту «Eraser» для розділення об'єктів, що торкаються один
+                                одного, та фільтрації візуального шуму для підвищення точності розпізнавання.</span>
                         </li>
                     </ul>
                 </div>
+
                 <div class="project-item">
                     <h3>
-                        <span data-lang="en">Custom Data Structures & Manual Unit Testing (Java)</span>
-                        <span data-lang="ua">Власні структури даних та ручне модульне тестування (Java)</span>
+                        <span data-lang="en">Mathematical Expression Evaluator (Java)</span>
+                        <span data-lang="ua">Парсер та обчислювач математичних виразів (Java)</span>
                     </h3>
+                    <p>
+                        <a
+                            href="https://github.com/Koskovtsev/learn_projects/blob/master/shppCS-B/src/improved/src/com/shpp/p2p/cs/akoskovtsev/assignment11/Assignment11Part1.java">GitHub</a>
+                    </p>
+                    <ul>
+                        <li>
+                            <strong><span data-lang="en">Algorithm:</span><span data-lang="ua">Алгоритм:</span></strong>
+                            <span data-lang="en">Implemented the Shunting Yard algorithm to convert infix notation to
+                                Reverse Polish Notation (RPN).</span>
+                            <span data-lang="ua">Реалізував алгоритм «Сортувальна станція» для перетворення інфіксного
+                                запису математичних виразів у зворотну польську нотацію (RPN).</span>
+                        </li>
+                        <li>
+                            <strong><span data-lang="en">Features:</span><span
+                                    data-lang="ua">Можливості:</span></strong>
+                            <span data-lang="en">Supports operators (+, -, *, /, ^), trigonometric functions,
+                                logarithms, variables, and unary minus.</span>
+                            <span data-lang="ua">Підтримка операторів, тригонометричних функцій, логарифмів, роботи зі
+                                змінними та унарним мінусом.</span>
+                        </li>
+                        <li>
+                            <strong><span data-lang="en">Architecture:</span><span
+                                    data-lang="ua">Архітектура:</span></strong>
+                            <span data-lang="en">Utilized Stack-based data structures and efficient tokenization for
+                                robust error handling.</span>
+                            <span data-lang="ua">Використав стекові структури даних та ефективну токенізацію для
+                                надійної обробки помилок.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>
+                        <span data-lang="en">Data Structures & Logic Foundations (Java)</span>
+                        <span data-lang="ua">Структури даних та основи логіки (Java)</span>
+                    </h3>
+                    <p>
+                        <a
+                            href="https://github.com/Koskovtsev/learn_projects/tree/master/shppCS-B/src/MyCollections">GitHub</a>
+                    </p>
                     <ul>
                         <li>
                             <strong><span data-lang="en">Implementation:</span><span
                                     data-lang="ua">Реалізація:</span></strong>
-                            <span data-lang="en">Built custom versions of ArrayList and LinkedList from scratch
-                                (Java).</span>
-                            <span data-lang="ua">З нуля розробив власні версії ArrayList та LinkedList на
-                                Java.</span>
+                            <span data-lang="en">Developed custom versions of ArrayList and LinkedList from scratch
+                                to understand internal memory management and algorithms.</span>
+                            <span data-lang="ua">З нуля розробив власні версії ArrayList та LinkedList для розуміння
+                                внутрішніх алгоритмів та керування пам'яттю.</span>
                         </li>
                         <li>
-                            <strong>
-                                <span data-lang="en">Validation:</span>
-                                <span data-lang="ua">Валідація:</span>
-                            </strong>
-                            <span data-lang="en">Created a proprietary testing framework to validate core
-                                logic.</span>
-                            <span data-lang="ua">Створив власну систему тестів для перевірки основної логіки.</span>
-                        </li>
-                        <li>
-                            <strong>
-                                <span data-lang="en">Edge Case Analysis:</span>
-                                <span data-lang="ua">Аналіз граничних випадків:</span>
-                            </strong>
-                            <span data-lang="en">Manually verified boundary conditions and data integrity without
-                                using external libraries.</span>
-                            <span data-lang="ua">Вручну перевіряв граничні умови та цілісність даних без
-                                використання сторонніх бібліотек.</span>
+                            <strong><span data-lang="en">Reliability:</span><span
+                                    data-lang="ua">Надійність:</span></strong>
+                            <span data-lang="en">Built logic to verify data integrity and handled boundary
+                                conditions (edge cases) without external libraries.</span>
+                            <span data-lang="ua">Створив логіку для перевірки цілісності даних та опрацював граничні
+                                випадки без використання сторонніх бібліотек.</span>
                         </li>
                     </ul>
                 </div>
@@ -321,13 +376,14 @@
                     </li>
                     <li>
                         <strong>
-                            <span data-lang="en">QA & Testing:</span>
-                            <span data-lang="ua">QA та тестування:</span>
+                            <span data-lang="en">Optimization & Quality:</span>
+                            <span data-lang="ua">Оптимізація та якість:</span>
                         </strong>
-                        <span data-lang="en">Performed comprehensive UI testing: responsiveness (320px–1920px),
-                            cross-browser compatibility, and anchor links.</span>
-                        <span data-lang="ua">Провів повне тестування інтерфейсу: адаптивність (320px–1920px),
-                            кросбраузерність та коректність якірних посилань.</span>
+                        <span data-lang="en">Ensured perfect responsiveness (320px–1920px) and cross-browser stability.
+                            Verified interactive elements, anchor navigation, and layout consistency.</span>
+                        <span data-lang="ua">Забезпечив повну адаптивність (320px–1920px) та стабільність у різних
+                            браузерах. Перевірив роботу інтерактивних елементів, якірну навігацію та відповідність
+                            макету.</span>
                     </li>
                 </ul>
             </div>
@@ -361,18 +417,25 @@
             </h2>
             <div class="training-item">
                 <h3>
-                    <span data-lang="en">Ш++ Computer Science School</span>
-                    <span data-lang="ua">Школа програмування Ш++</span>
+                    <span data-lang="en">Frontend Development & Computer Science | Ш++ School</span>
+                    <span data-lang="ua">Frontend розробка та Computer Science | Школа Ш++</span>
                 </h3>
                 <ul>
                     <li>
-                        <p>
-                            <a href="https://diploma.programming.org.ua/d/OVN3xjyLvYbnaldVr1d6RE2q98G7W5Pk">Ш++</a>
-                            <span data-lang="en">Alumnus of Computer Science Basics. Completed curriculum based on
-                                Stanford CS106A & CS106B.</span>
-                            <span data-lang="ua">Випускник курсу «Основи Computer Science». Програма на основі Stanford
-                                CS106A та CS106B.</span>
-                        </p>
+                        <strong><span data-lang="en">Current focus:</span><span data-lang="ua">Актуальне
+                                навчання:</span></strong>
+                        <a href="https://programming.org.ua/ua/courses/adults">Ш++</a>
+                        <span data-lang="en">Intensive Frontend Development course (JavaScript, React).</span>
+                        <span data-lang="ua">Інтенсивний курс Frontend-розробки (JavaScript, React).</span>
+                    </li>
+                    <li>
+                        <strong><span data-lang="en">CS Foundations:</span><span data-lang="ua">База Computer
+                                Science:</span></strong>
+                        <a href="https://diploma.programming.org.ua/d/OVN3xjyLvYbnaldVr1d6RE2q98G7W5Pk">Ш++</a>
+                        <span data-lang="en">Alumnus of Computer Science Basics. Completed curriculum based on
+                            Stanford CS106A & CS106B.</span>
+                        <span data-lang="ua">Випускник курсу «Основи Computer Science». Програма на основі Stanford
+                            CS106A та CS106B.</span>
                     </li>
                 </ul>
                 <h3>
@@ -405,12 +468,6 @@
                 <li>
                     <span data-lang="en">Independently managed B2B sales across 3 cities and retail chains.</span>
                     <span data-lang="ua">Самостійно керував B2B продажами у 3 містах та торговельних мережах.</span>
-                </li>
-                <li>
-                    <span data-lang="en">Ensured 100% accuracy in financial reporting and technical
-                        specifications.</span>
-                    <span data-lang="ua">Забезпечував 100% точність у фінансовій звітності та технічних
-                        специфікаціях.</span>
                 </li>
                 <li>
                     <span data-lang="en">Consistently ranked in Top-3 performers out of 100+ reps.</span>
@@ -460,32 +517,33 @@
 
             <ul class="skills-grid">
                 <li class="skill-item">
-                    <strong><span data-lang="en">QA Awareness:</span><span data-lang="ua">Основи QA:</span></strong>
-                    <span data-lang="en">Bug reporting (Steps, Expected/Actual results), Test-cases basics, Chrome
-                        DevTools.</span>
-                    <span data-lang="ua">Баг-репортинг (кроки, очікуваний/фактичний результат), основи тест-кейсів,
-                        Chrome DevTools.</span>
+                    <strong>
+                        <span data-lang="en">CS Fundamentals:</span>
+                        <span data-lang="ua">База Computer Science:</span>
+                    </strong>
+                    <span data-lang="en">Algorithms, Data Structures (custom implementations in Java), OOP
+                        principles.</span>
+                    <span data-lang="ua">Алгоритми, структури даних (власні реалізації на Java), принципи ООП.</span>
                 </li>
                 <li class="skill-item">
                     <strong>
-                        <span data-lang="en">Tech Stack:</span>
-                        <span data-lang="ua">Технології:</span>
+                        <span data-lang="en">Frontend (Current Study in Ш++):</span>
+                        <span data-lang="ua">Фронтенд (навчання в Ш++):</span>
                     </strong>
-                    <span>Java Core, OOP, JavaScript (ES6+), HTML5, CSS3.</span>
+                    <span data-lang="en">HTML5, CSS3, JavaScript (ES6+)</span>
                 </li>
+
                 <li class="skill-item">
                     <strong>
                         <span data-lang="en">Tools:</span>
                         <span data-lang="ua">Інструменти:</span>
                     </strong>
-                    <span>Git, Figma, VS Code, 1C, MS Office.</span>
+                    <span>Git, VS Code, Figma, Chrome DevTools.</span>
                 </li>
                 <li class="skill-item">
                     <strong><span data-lang="en">Languages:</span><span data-lang="ua">Мови:</span></strong>
-                    <span data-lang="en">English (Intermediate, reading technical documentation), Ukrainian (Native),
-                        Russian (Fluent).</span>
-                    <span data-lang="ua">Англійська (інтермедіат, читання технічної документації), Українська (Рідна),
-                        Російська (Вільна).</span>
+                    <span data-lang="en">English (B1), Ukrainian (Native), Russian (Fluent).</span>
+                    <span data-lang="ua">Англійська (B1), Українська (Рідна), Російська (Вільна).</span>
                 </li>
             </ul>
         </section>
